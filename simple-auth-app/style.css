@@ -1,0 +1,183 @@
+/* Basic Reset & Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #2c3e50; /* Dark blue-grey background */
+    color: #ecf0f1; /* Light text color */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically and horizontally */
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.auth-container {
+    background-color: #34495e; /* Slightly lighter blue-grey for container */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 500px; /* Max width for auth forms */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Header */
+.auth-header {
+    background-color: #1abc9c; /* Teal green header */
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.auth-header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.auth-header p {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Main Content Area */
+.auth-main {
+    padding: 30px;
+}
+
+.auth-section {
+    display: none; /* Hidden by default, JS controls visibility */
+}
+
+.auth-section.active {
+    display: block; /* Show active section */
+}
+
+.auth-section h2 {
+    color: #1abc9c;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.auth-section h2 .fas {
+    margin-right: 10px;
+}
+
+/* Forms */
+.auth-form {
+    text-align: left; /* Align form elements to left within form */
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #bdc3c7;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: calc(100% - 24px); /* Full width minus padding and border */
+    padding: 12px;
+    border: 1px solid #7f8c8d;
+    border-radius: 5px;
+    background-color: #3b506b;
+    color: #ecf0f1;
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-auth {
+    background-color: #1abc9c;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-auth:hover {
+    background-color: #16a085;
+}
+
+.btn-logout {
+    background-color: #e74c3c; /* Red for logout */
+    color: white;
+    margin-top: 20px;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Switch Form Text */
+.switch-form-text {
+    margin-top: 25px;
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+.switch-form-text a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.switch-form-text a:hover {
+    color: #16a085;
+    text-decoration: underline;
+}
+
+/* Hidden Utility Class */
+.hidden {
+    display: none !important;
+}
+
+/* Message Area for Feedback */
+.message-area {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+.message-area.show {
+    display: block;
+}
+
+.message-area.success {
+    background-color: #27ae60; /* Green */
+    color: white;
+}
+
+.message-area.error {
+    background-color: #e74c3c; /* Red */
+    color: white;
+}
